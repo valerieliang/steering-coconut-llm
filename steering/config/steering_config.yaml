@@ -1,7 +1,7 @@
 # steering/config/steering_config.yaml
 
 # Data Paths
-model_path: ~/coconut-cot/checkpoints/prosqa-coconut/checkpoint_48
+model_path: ~/coconut-cot/checkpoints/prosqa-coconut/checkpoint_best
 train_path: ~/coconut-cot/coconut/data/prosqa_train.json
 val_path:   ~/coconut-cot/coconut/data/prosqa_valid.json
 
