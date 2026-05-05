@@ -19,6 +19,12 @@ conda activate coconut
 pip install torch transformers sklearn pandas matplotlib numpy pyyaml
 ```
 
+## Getting Started with Coconut
+
+The first step is to clone the Coconut repository from https://github.com/facebookresearch/coconut and train the model on the ProsQA dataset using their instructions, configuring YAML files as needed. Use the best model (highest test/validation accuracy) for all steering experiments described above.
+
+Make sure to update the `model_path` in `steering/config/steering_config.yaml` to point to your trained checkpoint path (e.g., `~/coconut-cot/checkpoints/prosqa-coconut/checkpoint_48` or your best performing checkpoint).
+
 ## Configuration
 
 Edit `steering/config/steering_config.yaml` to set:
