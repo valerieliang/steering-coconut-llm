@@ -1,0 +1,27 @@
+# steering/config/steering_config.yaml
+
+# Data Paths
+model_path: ~/coconut-cot/checkpoints/prosqa-coconut/checkpoint_48
+train_path: ~/coconut-cot/coconut/data/prosqa_train.json
+val_path:   ~/coconut-cot/coconut/data/prosqa_valid.json
+
+# Output Directory
+output_dir: ~/coconut-cot/steering/outputs
+
+# Model settings 
+n_latent: 6                         # Number of latent tokens per sample
+latent_positions: [1, 2, 3, 4, 5]   # Positions to extract vectors from (1-indexed)
+
+# Contrastive construction 
+#   swap        - Phase 1: swap answer order in same question (weak signal)
+#   cross_pair  - Phase 2: pair different samples with different answers (strong)
+contrastive_mode: cross_pair   
+
+n_contrast: 500                # Number of pairs used to build each steering vector
+
+# Steering evaluation
+# Alphas in both directions to test sign-asymmetry
+alpha_sweep: [-1200, -600, -300, -100, 100, 300, 600, 1200]
+
+# Probe experiment 
+n_probe: 400      # Held-out samples for answer-decodability probe
